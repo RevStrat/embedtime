@@ -1,0 +1,6 @@
+---
+Name: embedtimeconfig
+---
+Page_Controller:
+  extensions:
+    - EmbedTimeControllerExtension
