@@ -6,7 +6,7 @@
     ],
     "type": "silverstripe-module",
     "require": {
-        "silverstripe/cms": "^4",
+        "silverstripe/cms": "^3.6",
         "mediaweb/silverstripe-tinymce4": "^1"
     },
     "license": "BSD-2-Clause",
