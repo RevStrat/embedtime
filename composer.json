@@ -1,0 +1,21 @@
+{
+    "name": "revstrat/embedtime",
+    "description": "SilverStripe extension for TinyMCE to enable embedding responsive iframes",
+    "keywords": [
+        "silverstripe"
+    ],
+    "type": "silverstripe-module",
+    "require": {
+        "silverstripe/cms": "^4",
+        "mediaweb/silverstripe-tinymce4": "^1"
+    },
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Rob Rankin",
+            "email": "rob@revolutionstrategy.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
