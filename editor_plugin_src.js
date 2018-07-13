@@ -8,11 +8,15 @@ tinymce.PluginManager.add('embedtime', function(editor, url) {
     });
     tinymce.DOM.loadCSS(url + '/css/editor.css');
     function onClickEmbedTimeButton() {
+        var iframeClasses;
+        if (iframe && iframe.parentNode) {
+            iframeClasses = iframe.parentNode.getAttribute('class');
+        }
         editor.windowManager.open({
             title: 'Embed Responsive iFrame',
             body: [
                 {type: 'textbox', name: 'code', label: 'iFrame Embed Code', value: iframe ? iframe.outerHTML : null },
-                {type: 'listbox', name: 'aspect', label: 'Aspect Ratio', value: iframe ? iframe.parentNode.getAttribute('class').split(' ').filter(function(iframeClass){
+                {type: 'listbox', name: 'aspect', label: 'Aspect Ratio', value: iframeClasses ? iframeClasses.split(' ').filter(function(iframeClass){
                     return iframeClass.startsWith('Aspect');
                 }) : null, values: [
                     {text: '16:9 (widescreen)', value: 'Aspect16x9'},
