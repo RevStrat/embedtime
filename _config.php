@@ -1,12 +1,12 @@
 <?php
 
-//use SilverStripe\View\Requirements;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorConfig;
 
 define('EMBEDTIME_PATH', dirname(__FILE__));
 define('EMBEDTIME_DIR', basename(EMBEDTIME_PATH));
 
-CustomHtmlEditorConfig::get('cms')->enablePlugins(array(
-    'embedtime' => '/' . EMBEDTIME_DIR . '/editor_plugin_src.js'
+HTMLEditorConfig::get('cms')->enablePlugins(array(
+    'embedtime' => EMBEDTIME_DIR . '/editor_plugin_src.js'
 ));
 
-CustomHtmlEditorConfig::get('cms')->addButtonsToLine(1, 'embedtime');
+HTMLEditorConfig::get('cms')->addButtonsToLine(1, 'embedtime');
