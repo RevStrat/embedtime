@@ -1,5 +1,7 @@
 <?php
 
+namespace RevStrat\EmbedTime;
+
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\View\Requirements;
 

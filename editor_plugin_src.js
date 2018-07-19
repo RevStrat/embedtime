@@ -19,10 +19,10 @@ tinymce.PluginManager.add('embedtime', function(editor, url) {
                 {type: 'listbox', name: 'aspect', label: 'Aspect Ratio', value: iframeClasses ? iframeClasses.split(' ').filter(function(iframeClass){
                     return iframeClass.startsWith('Aspect');
                 }) : null, values: [
+                    {text: 'None', value: 'AspectNone'},
                     {text: '16:9 (widescreen)', value: 'Aspect16x9'},
                     {text: '4:3 (old TV)', value: 'Aspect4x3'},
-                    {text: '1:1 (square)', value: 'Aspect1x1'},
-                    {text: 'None', value: 'AspectNone'}
+                    {text: '1:1 (square)', value: 'Aspect1x1'}
                 ] }
             ],
             onsubmit: function(e) {

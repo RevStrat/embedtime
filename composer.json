@@ -4,7 +4,7 @@
     "keywords": [
         "silverstripe"
     ],
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "require": {
         "silverstripe/cms": "^4.0"
     },
@@ -15,6 +15,18 @@
             "email": "rob@revolutionstrategy.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "RevStrat\\EmbedTime\\": "src/"
+        }
+    },
+    "extra": {
+        "installer-name": "embedtime",
+        "expose": [
+            "css",
+            "img"
+        ]
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
