@@ -3,4 +3,4 @@ Name: embedtimeconfig
 ---
 PageController:
   extensions:
-    - EmbedTimeControllerExtension
+    - RevStrat\EmbedTime\EmbedTimeControllerExtension

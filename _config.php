@@ -1,12 +1,17 @@
 <?php
 
-use SilverStripe\Forms\HTMLEditor\HTMLEditorConfig;
+use SilverStripe\Core\Manifest\ModuleLoader;
+use SilverStripe\Forms\HTMLEditor\TinyMCEConfig;
 
-define('EMBEDTIME_PATH', dirname(__FILE__));
-define('EMBEDTIME_DIR', basename(EMBEDTIME_PATH));
+// Avoid creating global variables
+call_user_func(function () {
+    $module = ModuleLoader::inst()->getManifest()->getModule('revstrat/embedtime');
 
-HTMLEditorConfig::get('cms')->enablePlugins(array(
-    'embedtime' => EMBEDTIME_DIR . '/editor_plugin_src.js'
-));
-
-HTMLEditorConfig::get('cms')->addButtonsToLine(1, 'embedtime');
+    // Re-enable media dialog
+    $config = TinyMCEConfig::get('cms');
+    $config->enablePlugins([
+        'embedtime' => $module
+            ->getResource('editor_plugin_src.js')
+    ]);
+    $config->insertButtonsAfter('ssembed', 'embedtime');
+});
