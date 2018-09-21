@@ -4,7 +4,7 @@
     "keywords": [
         "silverstripe"
     ],
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "require": {
         "silverstripe/cms": "^4.0"
     },
